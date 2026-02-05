@@ -10,14 +10,21 @@ import { Button } from '@/components/atoms/Button';
 
 export const Footer: React.FC = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 500);
+      const mobileMenuOpen = typeof window !== 'undefined' && (window as any).isMobileMenuOpen;
+      setIsMobileMenuOpen(mobileMenuOpen || false);
+      setShowScrollTop(window.scrollY > 500 && !mobileMenuOpen);
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const interval = setInterval(handleScroll, 100);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearInterval(interval);
+    };
   }, []);
 
   const scrollToTop = () => {
@@ -67,10 +74,10 @@ export const Footer: React.FC = () => {
             {/* Brand Column */}
             <div className="space-y-6">
               <div className="text-white">
-                <h3 className="text-2xl md:text-3xl font-bold">Sandbox</h3>
+                <h3 className="text-2xl md:text-3xl font-bold">Hexaloop</h3>
               </div>
               <div className="space-y-2 text-gray-400 text-sm">
-                <p>© 2022 Sandbox.</p>
+                <p>© 2024 Hexaloop.</p>
                 <p>All rights reserved.</p>
               </div>
               {/* Social Icons */}
@@ -126,11 +133,11 @@ export const Footer: React.FC = () => {
             {/* Get in Touch Column */}
             <FooterColumn title="Get in Touch">
               <div className="space-y-3 text-gray-400 text-sm md:text-base">
-                <p>Moonshine St. 14/05</p>
-                <p>Light City, London,</p>
-                <p>United Kingdom</p>
-                <p className="pt-3">info@email.com</p>
-                <p>00 (123) 456 78 90</p>
+                <p>Capital Tower,</p>
+                <p>Sapna Sangeeta Road,</p>
+                <p>Indore (M.P.) India - 452001</p>
+                <p className="pt-3">work@hexaloop.com</p>
+                <p>+91-887 117 1445</p>
               </div>
             </FooterColumn>
 
@@ -159,7 +166,7 @@ export const Footer: React.FC = () => {
       </div>
 
       {/* Scroll to Top Button */}
-      {showScrollTop && (
+      {showScrollTop && !isMobileMenuOpen && (
         <button
           onClick={scrollToTop}
           className="fixed bottom-8 right-8 w-12 h-12 bg-[#5EBEEB] text-white rounded-full shadow-lg hover:bg-[#4AADE0] transition-all duration-300 flex items-center justify-center z-50 hover:shadow-xl hover:scale-110"

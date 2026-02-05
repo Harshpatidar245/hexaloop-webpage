@@ -6,6 +6,10 @@ export { SectionHeading } from './atoms/SectionHeading';
 export { StepBadge } from './atoms/StepBadge';
 export { FooterLink } from './atoms/FooterLink';
 export { SocialIcon } from './atoms/SocialIcon';
+export { CheckmarkItem } from './atoms/CheckmarkItem';
+export { CategoryBadge } from './atoms/CategoryBadge';
+export { TechStackBadge } from './atoms/TechStackBadge';
+export { ModalBackdrop } from './atoms/ModalBackdrop';
 
 // Molecules
 export { Navigation } from './molecules/Navigation';
@@ -16,15 +20,21 @@ export { AccordionItem } from './molecules/AccordionItem';
 export { NewsletterForm } from './molecules/NewsletterForm';
 export { FooterColumn } from './molecules/FooterColumn';
 export { FeatureItem } from './molecules/FeatureItem';
+export { AboutFeature } from './molecules/AboutFeature';
+export { ProjectCard } from './molecules/ProjectCard';
 
 // Organisms
 export { Header } from './organisms/Header';
 export { Hero } from './organisms/Hero';
 export { MobileMenu } from './organisms/MobileMenu';
 export { Services } from './organisms/Services';
+export { WhoAreWe } from './organisms/WhoAreWe';
 export { Strategy } from './organisms/Strategy';
 export { WhyChooseUs } from './organisms/WhyChooseUs';
+export { LatestProjects } from './organisms/LatestProjects';
 export { Footer } from './organisms/Footer';
+export { ProjectsGrid } from './organisms/ProjectsGrid';
+export { ProjectModal } from './organisms/ProjectModal';
 
 // Templates
 export { MainLayout } from './templates/MainLayout';

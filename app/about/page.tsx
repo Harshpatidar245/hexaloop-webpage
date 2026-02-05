@@ -1,22 +1,14 @@
 import { Header } from '@/components/organisms/Header';
-import { Hero } from '@/components/organisms/Hero';
-import { Services } from '@/components/organisms/Services';
 import { WhoAreWe } from '@/components/organisms/WhoAreWe';
-import { Strategy } from '@/components/organisms/Strategy';
 import { WhyChooseUs } from '@/components/organisms/WhyChooseUs';
-import { LatestProjects } from '@/components/organisms/LatestProjects';
 import { Footer } from '@/components/organisms/Footer';
 
-export default function Home() {
+export default function AboutPage() {
   return (
     <div className="min-h-screen">
       <Header />
       <main>
-        <Hero />
-        <Services />
         <WhoAreWe />
-        <Strategy />
-        <LatestProjects />
         <WhyChooseUs />
       </main>
       <Footer />

@@ -13,7 +13,7 @@ export const NavLink: React.FC<NavLinkProps> = ({ href, children, hasDropdown, o
     <Link 
       href={href}
       onClick={onClick}
-      className="text-gray-600 hover:text-gray-900 transition-colors font-medium flex items-center gap-1"
+      className="text-gray-600 hover:text-gray-900 transition-colors font-medium flex items-center gap-1 md:text-gray-600 md:hover:text-gray-900 [.flex-col_&]:text-gray-300 [.flex-col_&]:hover:text-white [.flex-col_&]:text-lg"
     >
       {children}
       {hasDropdown && (

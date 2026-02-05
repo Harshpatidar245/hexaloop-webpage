@@ -65,16 +65,16 @@ export const WhyChooseUs: React.FC = () => {
 
   const features = [
     {
-      title: 'Professional Design',
-      content: 'Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel.'
+      title: 'High Quality Work',
+      content: 'We believe in providing high quality of work to our clients. Our experienced team ensures every project meets the highest standards of excellence and reliability.'
     },
     {
-      title: 'Top-Notch Support',
-      content: 'Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel.'
+      title: 'Affordable Prices',
+      content: 'We believe in providing application at affordable prices. Quality software development should be accessible to businesses of all sizes without compromising on features or performance.'
     },
     {
-      title: 'Header and Slider Options',
-      content: 'Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel.'
+      title: 'On-Time Delivery',
+      content: 'We believe in delivering our clients work on time. Our project management approach ensures timely completion while maintaining quality and meeting all requirements.'
     }
   ];
 

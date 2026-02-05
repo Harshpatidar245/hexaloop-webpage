@@ -90,27 +90,27 @@ const AnimationIcon = () => (
 export const Services: React.FC = () => {
   const services = [
     {
-      title: 'Web Design',
-      description: 'Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget. Fusce dapibus tellus.',
+      title: 'Website Design',
+      description: 'We offers creative, unique, economic, and trendy Website Design. We provide exclusive designs of your ideas with multiple options to choose from.',
       icon: <WebDesignIcon />,
       href: '#web-design'
     },
     {
-      title: 'Graphic Design',
-      description: 'Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet. Sed posuere consectetur.',
+      title: 'Mobile Application',
+      description: 'We develop mobile apps which works on both iOS & Android platforms. We are expertise in building all type of custom apps for startup to large businesses.',
       icon: <GraphicDesignIcon />,
-      href: '#graphic-design'
+      href: '#mobile-app'
     },
     {
-      title: '3D Animation',
-      description: 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna scelerisque.',
+      title: 'Graphics & Multimedia Design',
+      description: 'We offer a range of graphic design services such as Logo Design, Business cards, Brochure Design, Banner Design, Newsletter Design, and more.',
       icon: <AnimationIcon />,
-      href: '#3d-animation'
+      href: '#graphic-design'
     }
   ];
 
   return (
-    <section className="relative py-16 sm:py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-[#EDF7FC]">
+    <section className="relative py-16 sm:py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#EDF7FC] to-white pb-32 sm:pb-36 md:pb-40">
       {/* Wavy top border */}
       <div className="absolute top-0 left-0 right-0 overflow-hidden h-16 sm:h-20 md:h-24">
         <svg 
@@ -140,6 +140,19 @@ export const Services: React.FC = () => {
             />
           ))}
         </div>
+      </div>
+
+      {/* Wavy bottom border */}
+      <div className="absolute bottom-0 left-0 right-0 overflow-hidden">
+        <svg
+          className="w-full"
+          viewBox="0 0 1440 120"
+          preserveAspectRatio="none"
+          fill="white"
+          style={{ height: '120px', display: 'block' }}
+        >
+          <path d="M0,50 C120,20 180,80 300,50 C420,20 480,80 600,50 C720,20 780,80 900,50 C1020,20 1080,80 1200,50 C1320,20 1380,80 1440,50 L1440,120 L0,120 Z" />
+        </svg>
       </div>
     </section>
   );

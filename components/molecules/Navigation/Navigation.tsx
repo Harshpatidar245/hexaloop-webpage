@@ -4,12 +4,11 @@ import React from 'react';
 import { NavLink } from '@/components/atoms/NavLink';
 
 const navItems = [
-  { label: 'Demos', href: '#', hasDropdown: true },
-  { label: 'Pages', href: '#', hasDropdown: true },
-  { label: 'Projects', href: '#', hasDropdown: true },
-  { label: 'Blog', href: '#', hasDropdown: true },
-  { label: 'Blocks', href: '#', hasDropdown: true },
-  { label: 'Documentation', href: '#', hasDropdown: true },
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'About', href: '/about' },
+  // { label: 'Contact Us', href: '#contact' },
 ];
 
 interface NavigationProps {
@@ -23,8 +22,7 @@ export const Navigation: React.FC<NavigationProps> = ({ isMobile, onLinkClick })
       {navItems.map((item) => (
         <NavLink 
           key={item.label} 
-          href={item.href} 
-          hasDropdown={item.hasDropdown}
+          href={item.href}
           onClick={onLinkClick}
         >
           {item.label}

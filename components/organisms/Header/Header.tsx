@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Logo } from '@/components/atoms/Logo';
 import { Navigation } from '@/components/molecules/Navigation';
 import { Button } from '@/components/atoms/Button';
@@ -9,9 +9,16 @@ import { MobileMenu } from '../MobileMenu';
 export const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // Expose mobile menu state globally
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      (window as any).isMobileMenuOpen = isMobileMenuOpen;
+    }
+  }, [isMobileMenuOpen]);
+
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 shadow-sm">
+      <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-[110] shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}

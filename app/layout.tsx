@@ -13,8 +13,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sandbox - Digital Agency",
+  title: "Hexaloop - Digital Agency",
   description: "A digital agency specializing in mobile design. Award winning design agency that strongly believes in the power of creative ideas.",
+  icons: {
+    icon: [
+      { url: "/icons/logo.png" },
+      { url: "/icons/logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/icons/logo.png", sizes: "16x16", type: "image/png" }
+    ],
+    shortcut: "/icons/logo.png",
+    apple: "/icons/logo.png",
+  },
 };
 
 export default function RootLayout({

@@ -8,7 +8,7 @@ const navItems = [
   { label: 'Services', href: '/services' },
   { label: 'Projects', href: '/projects' },
   { label: 'About', href: '/about' },
-  // { label: 'Contact Us', href: '#contact' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 interface NavigationProps {

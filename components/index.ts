@@ -10,6 +10,8 @@ export { CheckmarkItem } from './atoms/CheckmarkItem';
 export { CategoryBadge } from './atoms/CategoryBadge';
 export { TechStackBadge } from './atoms/TechStackBadge';
 export { ModalBackdrop } from './atoms/ModalBackdrop';
+export { Input } from './atoms/Input';
+export { TextArea } from './atoms/TextArea';
 
 // Molecules
 export { Navigation } from './molecules/Navigation';
@@ -22,6 +24,7 @@ export { FooterColumn } from './molecules/FooterColumn';
 export { FeatureItem } from './molecules/FeatureItem';
 export { AboutFeature } from './molecules/AboutFeature';
 export { ProjectCard } from './molecules/ProjectCard';
+export { ContactForm } from './molecules/ContactForm';
 
 // Organisms
 export { Header } from './organisms/Header';
@@ -35,6 +38,7 @@ export { LatestProjects } from './organisms/LatestProjects';
 export { Footer } from './organisms/Footer';
 export { ProjectsGrid } from './organisms/ProjectsGrid';
 export { ProjectModal } from './organisms/ProjectModal';
+export { ContactHero } from './organisms/ContactHero';
 
 // Templates
 export { MainLayout } from './templates/MainLayout';

@@ -29,7 +29,7 @@ export const Header: React.FC = () => {
 
             {/* Desktop Contact Button */}
             <div className="hidden lg:block">
-              <Button href="#contact">Contact</Button>
+              <Button href="/hire">Hire Me</Button>
             </div>
 
             {/* Mobile Menu Button */}

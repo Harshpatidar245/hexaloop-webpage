@@ -25,6 +25,7 @@ export { FeatureItem } from './molecules/FeatureItem';
 export { AboutFeature } from './molecules/AboutFeature';
 export { ProjectCard } from './molecules/ProjectCard';
 export { ContactForm } from './molecules/ContactForm';
+export { HireForm } from './molecules/HireForm';
 
 // Organisms
 export { Header } from './organisms/Header';
@@ -39,6 +40,7 @@ export { Footer } from './organisms/Footer';
 export { ProjectsGrid } from './organisms/ProjectsGrid';
 export { ProjectModal } from './organisms/ProjectModal';
 export { ContactHero } from './organisms/ContactHero';
+export { HireHero } from './organisms/HireHero';
 
 // Templates
 export { MainLayout } from './templates/MainLayout';

@@ -26,16 +26,41 @@ export const ContactForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus('idle');
     
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setSubmitStatus('success');
-    setFormData({ name: '', email: '', phone: '', message: '' });
-    
-    // Reset success message after 3 seconds
-    setTimeout(() => setSubmitStatus('idle'), 3000);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', phone: '', message: '' });
+        
+        // Reset success message after 5 seconds
+        setTimeout(() => setSubmitStatus('idle'), 5000);
+      } else {
+        setSubmitStatus('error');
+        console.error('Error:', data.error);
+        
+        // Reset error message after 5 seconds
+        setTimeout(() => setSubmitStatus('idle'), 5000);
+      }
+    } catch (error) {
+      console.error('Failed to send message:', error);
+      setSubmitStatus('error');
+      
+      // Reset error message after 5 seconds
+      setTimeout(() => setSubmitStatus('idle'), 5000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -43,7 +68,7 @@ export const ContactForm: React.FC = () => {
       <Input
         id="name"
         label="Your Name"
-        placeholder="John Doe"
+        placeholder="Rahul Sharma"
         required
         value={formData.name}
         onChange={handleChange}
@@ -53,7 +78,7 @@ export const ContactForm: React.FC = () => {
         id="email"
         label="Email Address"
         type="email"
-        placeholder="john@example.com"
+        placeholder="rahul@example.com"
         required
         value={formData.email}
         onChange={handleChange}
@@ -61,9 +86,9 @@ export const ContactForm: React.FC = () => {
       
       <Input
         id="phone"
-        label="Phone Number"
+        label="Phone Number (Optional)"
         type="tel"
-        placeholder="+1 (555) 000-0000"
+        placeholder="+91 98765 43210"
         value={formData.phone}
         onChange={handleChange}
       />
@@ -90,6 +115,12 @@ export const ContactForm: React.FC = () => {
       {submitStatus === 'success' && (
         <p className="text-green-600 text-center text-sm sm:text-base">
           ✓ Message sent successfully! We'll get back to you soon.
+        </p>
+      )}
+      
+      {submitStatus === 'error' && (
+        <p className="text-red-600 text-center text-sm sm:text-base">
+          ✗ Failed to send message. Please try again or contact us directly.
         </p>
       )}
     </form>

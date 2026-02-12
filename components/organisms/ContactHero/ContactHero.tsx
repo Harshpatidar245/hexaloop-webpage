@@ -97,7 +97,7 @@ export const ContactHero: React.FC = () => {
             </div>
             <div>
               <p className="font-semibold text-gray-900 text-sm sm:text-base mb-1">Address</p>
-              <p className="text-gray-600 text-sm sm:text-base">Moonshine St. 14/05 Light City, London</p>
+              <p className="text-gray-600 text-sm sm:text-base">MG Road, Sector 14, Gurugram, Haryana, India</p>
             </div>
           </div>
           
@@ -109,8 +109,8 @@ export const ContactHero: React.FC = () => {
             </div>
             <div>
               <p className="font-semibold text-gray-900 text-sm sm:text-base mb-1">Phone</p>
-              <a href="tel:00123456789" className="text-gray-600 hover:text-blue-600 text-sm sm:text-base transition-colors">
-                00 (123) 456 78 90
+              <a href="tel:+919876543210" className="text-gray-600 hover:text-blue-600 text-sm sm:text-base transition-colors">
+                +91 88711 71445
               </a>
             </div>
           </div>
@@ -123,8 +123,8 @@ export const ContactHero: React.FC = () => {
             </div>
             <div>
               <p className="font-semibold text-gray-900 text-sm sm:text-base mb-1">E-mail</p>
-              <a href="mailto:sandbox@email.com" className="text-gray-600 hover:text-blue-600 text-sm sm:text-base transition-colors">
-                sandbox@email.com
+              <a href="mailto:career24x7growth@gmail.com" className="text-gray-600 hover:text-blue-600 text-sm sm:text-base transition-colors">
+                career24x7growth@gmail.com
               </a>
             </div>
           </div>
